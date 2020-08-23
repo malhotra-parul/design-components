@@ -1,5 +1,6 @@
 import React from 'react'
 import { PrimaryButton, SecondaryButton, TertiaryButton } from "./components/Buttons";
+import { GlobalStyle } from "./utils";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
         <TertiaryButton>
             Submit
         </TertiaryButton>
+        <GlobalStyle />
         </div>
     )
 }
