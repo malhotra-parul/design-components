@@ -1,9 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-const App = () => (
-    <h1>Styled components</h1>
-)
+import App from "./App.js";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
