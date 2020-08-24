@@ -8,13 +8,13 @@ function App() {
                     justifyContent:"space-evenly", 
                     alignItems: "center", 
                     marginTop: "20px"}} >
-        <PrimaryButton modifiers="small">
+        <PrimaryButton modifiers={["small", "warning", "warningPrimary"]}>
             Submit
         </PrimaryButton>
-        <SecondaryButton modifiers="large">
+        <SecondaryButton modifiers={["large", "warning", "warningSecondary"]}>
             Submit
         </SecondaryButton>
-        <TertiaryButton modifiers={["small"]}>
+        <TertiaryButton modifiers={["small", "warning"]}>
             Submit
         </TertiaryButton >
         <GlobalStyle />

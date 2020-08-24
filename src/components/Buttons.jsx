@@ -9,9 +9,35 @@ const BUTTON_MODIFIERS = {
         `,
         large: () => `
                 padding: 16px 24px;
-                font-size: ${typeScale.header2};
-                
-        `
+                font-size: ${typeScale.header2};       
+        `,
+        warning: () => `
+                background: none;
+                outline-offset: 2px;
+                outline : 1px solid transparent;
+                color: ${lightTheme.status.warningColor};
+
+                &:hover, &:focus{
+                        outline-color: ${lightTheme.status.warningColorHover};
+                        border: 1px solid ${lightTheme.status.warningColor};
+                        background: ${lightTheme.status.warningColorHover};
+                        color: ${lightTheme.status.textColorInverted}
+                }
+
+                &:active{
+                        background: ${lightTheme.status.warningColorActive};
+                }
+        `,
+        warningPrimary: () =>`
+                background-color: ${lightTheme.status.warningColor};
+                color: ${lightTheme.textColorInverted};
+                border: none;
+        `,
+        warningSecondary: () => `
+                border: 1px solid ${lightTheme.status.warningColor};
+                color: ${lightTheme.status.textColorInverted};
+        `,
+
 }
 
 
@@ -53,7 +79,7 @@ export const PrimaryButton = styled(Button)`
         background: ${lightTheme.primaryColor};
         color: #F4F5F7;
         border: 1px solid ${lightTheme.primaryColor};
-        filter: drop-shadow(0px 0px 1px ${lightTheme.primaryColor} );
+        /* filter: drop-shadow(0px 0px 1px ${lightTheme.primaryColor} ); */
 
         ${applyStyleModifiers(BUTTON_MODIFIERS)}
 `;
