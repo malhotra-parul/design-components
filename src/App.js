@@ -1,25 +1,40 @@
-import React from 'react'
-import { PrimaryButton, SecondaryButton, TertiaryButton } from "./components/Buttons";
-import { GlobalStyle } from "./utils";
+import React, { useState } from "react";
+import {
+  PrimaryButton,
+  SecondaryButton,
+  TertiaryButton,
+} from "./components/Buttons";
+import { GlobalStyle, lightTheme, darkTheme } from "./utils";
+import { ThemeProvider } from "styled-components";
 
 function App() {
-    return (
-        <div style={{display: "flex", 
-                    justifyContent:"space-evenly", 
-                    alignItems: "center", 
-                    marginTop: "20px"}} >
-        <PrimaryButton>
-            Submit
+  const [useDarkTheme, setUseDarkTheme] = useState(false);
+
+  return (
+    <ThemeProvider theme={useDarkTheme ? darkTheme : lightTheme}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          marginTop: "20px",
+          height: "100vh",
+          background: `${
+            useDarkTheme ? darkTheme.secondaryColor : lightTheme.secondaryColor
+          }`,
+        }}
+      >
+        <PrimaryButton onClick={() => setUseDarkTheme(false)}>
+          Light Theme
         </PrimaryButton>
-        <SecondaryButton modifiers={["large", "success", "successSecondary"]}>
-            Submit
+        <SecondaryButton onClick={() => setUseDarkTheme(true)}>
+          Dark Theme
         </SecondaryButton>
-        <TertiaryButton modifiers={["small", "success"]}>
-            Submit
-        </TertiaryButton >
+        <TertiaryButton>Submit</TertiaryButton>
         <GlobalStyle />
-        </div>
-    )
+      </div>
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
