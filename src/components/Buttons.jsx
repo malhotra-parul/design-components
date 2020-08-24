@@ -37,6 +37,59 @@ const BUTTON_MODIFIERS = {
                 border: 1px solid ${lightTheme.status.warningColor};
                 color: ${lightTheme.status.textColorInverted};
         `,
+        error: () => `
+                background: none;
+                outline-offset: 2px;
+                outline : 1px solid transparent;
+                color: ${lightTheme.status.errorColor};
+
+                &:hover, &:focus{
+                        outline-color: ${lightTheme.status.errorColorHover};
+                        border: 1px solid ${lightTheme.status.errorColor};
+                        background: ${lightTheme.status.errorColorHover};
+                        color: ${lightTheme.status.textColorInverted}
+                }
+
+                &:active{
+                        background: ${lightTheme.status.errorColorActive};
+                }
+        `,
+        errorPrimary: () =>`
+                background-color: ${lightTheme.status.errorColor};
+                color: ${lightTheme.textColorInverted};
+                border: none;
+        `,
+        errorSecondary: () => `
+                border: 1px solid ${lightTheme.status.errorColor};
+                color: ${lightTheme.status.textColorInverted};
+        `,
+        success: () => `
+                background: none;
+                outline-offset: 2px;
+                outline : 1px solid transparent;
+                color: ${lightTheme.status.successColor};
+
+                &:hover, &:focus{
+                        outline-color: ${lightTheme.status.successColorHover};
+                        border: 1px solid ${lightTheme.status.successColor};
+                        background: ${lightTheme.status.successColorHover};
+                        color: ${lightTheme.status.textColorInverted}
+                }
+
+                &:active{
+                        background: ${lightTheme.status.successColorActive};
+                }
+        `,
+        successPrimary: () =>`
+                background-color: ${lightTheme.status.successColor};
+                color: ${lightTheme.textColorInverted};
+                border: none;
+        `,
+        successSecondary: () => `
+                border: 1px solid ${lightTheme.status.successColor};
+                color: ${lightTheme.status.textColorInverted};
+        `,
+
 
 }
 
