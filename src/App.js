@@ -4,14 +4,17 @@ import { GlobalStyle } from "./utils";
 
 function App() {
     return (
-        <div style={{display: "flex", justifyContent:"space-evenly", marginTop: "20px"}} >
-        <PrimaryButton>
+        <div style={{display: "flex", 
+                    justifyContent:"space-evenly", 
+                    alignItems: "center", 
+                    marginTop: "20px"}} >
+        <PrimaryButton modifiers="small">
             Submit
         </PrimaryButton>
-        <SecondaryButton>
+        <SecondaryButton modifiers="large">
             Submit
         </SecondaryButton>
-        <TertiaryButton>
+        <TertiaryButton modifiers={["small"]}>
             Submit
         </TertiaryButton >
         <GlobalStyle />
