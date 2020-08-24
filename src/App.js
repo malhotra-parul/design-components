@@ -4,7 +4,7 @@ import { GlobalStyle } from "./utils";
 
 function App() {
     return (
-        <div style={{display: "flex", justifyContent:"space-evenly"}}>
+        <div style={{display: "flex", justifyContent:"space-evenly", marginTop: "20px"}} >
         <PrimaryButton>
             Submit
         </PrimaryButton>
@@ -13,7 +13,7 @@ function App() {
         </SecondaryButton>
         <TertiaryButton>
             Submit
-        </TertiaryButton>
+        </TertiaryButton >
         <GlobalStyle />
         </div>
     )

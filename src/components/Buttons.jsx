@@ -12,8 +12,12 @@ const Button = styled.button`
         font-family: ${lightTheme.primaryFont};
         min-width: 100px;
 
-        &:hover, &:focus{
+        &:hover{
                 background: ${lightTheme.primaryColorHover};
+        }
+        &:focus{
+                outline: 1px solid ${lightTheme.primaryColorHover};
+                outline-offset: 2px;
         }
         &:active{
                 background: ${lightTheme.primaryColorActive}
