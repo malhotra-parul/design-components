@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import {
-  PrimaryButton,
-  SecondaryButton,
-  TertiaryButton,
-} from "./components/Buttons";
+import { SignUpModal } from "./components/index";
 import { GlobalStyle, lightTheme, darkTheme } from "./utils";
 import { ThemeProvider } from "styled-components";
 
@@ -24,13 +20,7 @@ function App() {
           }`,
         }}
       >
-        <PrimaryButton onClick={() => setUseDarkTheme(false)}>
-          Light Theme
-        </PrimaryButton>
-        <SecondaryButton onClick={() => setUseDarkTheme(true)}>
-          Dark Theme
-        </SecondaryButton>
-        <TertiaryButton>Submit</TertiaryButton>
+        <SignUpModal />
         <GlobalStyle />
       </div>
     </ThemeProvider>
