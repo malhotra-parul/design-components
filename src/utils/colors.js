@@ -32,3 +32,9 @@ export const blue = {
     500: "#383a42",
     600: "#000000"
   };
+
+  export const palette = {
+    paleBlue: "#F3F2F7 ",
+    darkBlue: "#111344",
+    darkBg: "#D9DCE4"
+  }

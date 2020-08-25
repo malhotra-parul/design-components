@@ -1,4 +1,4 @@
-import { blue, neutral, yellow, red, green } from "./colors.js";
+import { blue, neutral, yellow, red, green, palette } from "./colors.js";
 import { primaryFont } from "./typography";
 
 export const lightTheme = {
@@ -8,8 +8,8 @@ export const lightTheme = {
     primaryColorActive: blue[100],
     primaryColorDisabled: neutral[400],
     textColorOnPrimary: neutral[100],
-    formElementBgColor: neutral[200],
-    textOnFormElement: neutral[600],
+    formElementBgColor: palette["paleBlue"],
+    textOnFormElement: palette["darkBlue"],
     textColor: neutral[500],
     textColorInverted: neutral[100],
     primaryFont,
@@ -31,9 +31,9 @@ export const darkTheme = {
     secondaryColor: neutral[500],
     primaryColorHover: neutral[200],
     primaryColorActive: neutral[300],
-    textColorOnPrimary: neutral[600],
-    formElementBgColor: neutral[500],
-    textOnFormElement: neutral[100],
+    textColorOnPrimary: neutral[400],
+    formElementBgColor: palette["darkBg"],
+    textOnFormElement: palette["darkBlue"],
     primaryColorDisabled: neutral[600],
     textColor: neutral[600],
     textColorInverted: neutral[600],

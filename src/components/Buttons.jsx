@@ -131,7 +131,7 @@ const Button = styled.button`
 export const PrimaryButton = styled(Button)`
         background: ${props => props.theme.primaryColor};
         color: ${props => props.theme.textColorInverted};
-        border: 1px solid ${props => props.theme.primaryColor};
+        border: 1px solid ${props => props.theme.textColorOnPrimary};
         /* filter: drop-shadow(0px 0px 1px ${props => props.theme.primaryColor} ); */
 
         ${applyStyleModifiers(BUTTON_MODIFIERS)}
